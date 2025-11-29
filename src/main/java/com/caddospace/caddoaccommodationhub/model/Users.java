@@ -6,10 +6,10 @@ import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
-@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
 @Data
 @Entity
-@Table
+@Table(name = "USERS")
+@EqualsAndHashCode(callSuper = false, onlyExplicitlyIncluded = true)
 public class Users extends Auditable implements Serializable {
 
     @Id
@@ -17,15 +17,20 @@ public class Users extends Auditable implements Serializable {
     @Column(name = "USER_ID")
     private long userId;
 
-    @Column(name = "NAME")
+    @Column(name = "NAME", nullable = false)
     private String name;
 
-    @Column(name = "EMAIL", unique = true)
+    @Column(name = "EMAIL", unique = true, nullable = false)
     private String email;
 
-    @Column(name = "PASSWORD")
+    @Column(name = "PASSWORD", nullable = false)
     private String password;
 
     @Column(name = "PHONE")
     private String phone;
+
+    // Owning side of relationship
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ROLE_ID", nullable = false)
+    private UserRole userRole;
 }
