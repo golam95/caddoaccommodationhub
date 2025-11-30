@@ -27,7 +27,10 @@ public class APIRoute {
     public static final String PROPERTY_DELETE = "/delete/{id}";
     public static final String PROPERTY_LIST= "/list";
 
-
+    public static final String ROOM_SAVE = "/save";
+    public static final String ROOM_UPDATE= "/update/{id}";
+    public static final String ROOM_DELETE = "/delete/{id}";
+    public static final String ROOM_LIST= "/list";
 
 
 
