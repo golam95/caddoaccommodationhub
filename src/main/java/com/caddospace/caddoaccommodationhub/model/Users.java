@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -33,4 +35,10 @@ public class Users extends Auditable implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ROLE_ID", nullable = false)
     private UserRole userRole;
+
+//    @OneToMany(mappedBy = "users")
+    @OneToMany(mappedBy = "users")
+    private List<Property> properties= new ArrayList<>();
+
+
 }

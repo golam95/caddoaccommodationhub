@@ -16,4 +16,19 @@ public class APIRoute {
     public static final String AMENITIES_UPDATE= "/update/{id}";
     public static final String AMENITIES_DELETE = "/delete/{id}";
     public static final String AMENITIES_LIST= "/list";
+
+    public static final String PROPERTY_TYPE_SAVE = "/save";
+    public static final String PROPERTY_TYPE_UPDATE= "/update/{id}";
+    public static final String PROPERTY_TYPE_DELETE = "/delete/{id}";
+    public static final String PROPERTY_TYPE_LIST= "/list";
+
+    public static final String PROPERTY_SAVE = "/save";
+    public static final String PROPERTY_UPDATE= "/update/{id}";
+    public static final String PROPERTY_DELETE = "/delete/{id}";
+    public static final String PROPERTY_LIST= "/list";
+
+
+
+
+
 }

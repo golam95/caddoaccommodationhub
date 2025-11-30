@@ -22,6 +22,6 @@ public class UserRole extends Auditable implements Serializable {
     private String roleType;
 
     // Inverse side of relationship
-    @OneToMany(mappedBy = "userRole", fetch = FetchType.LAZY)
-    private List<Users> users;
+//    @OneToMany(mappedBy = "USER_ROLE", fetch = FetchType.LAZY)
+//    private List<Users> users;
 }
