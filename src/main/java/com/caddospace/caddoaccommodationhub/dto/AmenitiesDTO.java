@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class AmenitiesDTO extends Amenities {
+public class AmenitiesDTO extends AuditableDTO {
 
     private long amenitiesId;
 

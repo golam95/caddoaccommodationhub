@@ -57,9 +57,11 @@ public class AmenitiesServiceImpl implements AmenitiesService {
     @Override
     public ResponseEntity<APIResponse<String>> deleteAmenities(Long id) {
         if (!amenitiesRepository.existsById(id)) {
-            new ResponseEntity<>(new APIResponse<>(false, 404, "AMENITIES NOT FOUND WITH ID: ", id), HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new APIResponse<>(false, 404, "AMENITIES NOT FOUND WITH ID: " + id, null), HttpStatus.NOT_FOUND);
         }
-        return null;
+
+        amenitiesRepository.deleteById(id);
+        return new ResponseEntity<>(new APIResponse<>(true, 201, "AMENITIES DELETED SUCCESSFULLY", null), HttpStatus.OK);
     }
 
     @Override
