@@ -11,4 +11,9 @@ public class APIRoute {
     public static final String UPDATE_USER = "/update/{id}";
     public static final String DELETE_USER = "/delete/{id}";
     public static final String USER_LIST = "/list";
+
+    public static final String AMENITIES_SAVE = "/save";
+    public static final String AMENITIES_UPDATE= "/update/{id}";
+    public static final String AMENITIES_DELETE = "/delete/{id}";
+    public static final String AMENITIES_LIST= "/list";
 }
