@@ -40,5 +40,8 @@ public class Users extends Auditable implements Serializable {
     @OneToMany(mappedBy = "users")
     private List<Property> properties= new ArrayList<>();
 
+//    Booking
+    @OneToMany(mappedBy = "users")
+    private List<Booking> bookings = new ArrayList<>();
 
 }

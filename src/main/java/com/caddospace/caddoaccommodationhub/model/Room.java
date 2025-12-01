@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -40,4 +42,8 @@ public class Room extends Auditable implements Serializable {
 
     @Column(name = "AMENITIES")
     private String amenities;
+
+    //    Booking
+    @OneToMany(mappedBy = "room")
+    private List<Booking> bookings = new ArrayList<>();
 }

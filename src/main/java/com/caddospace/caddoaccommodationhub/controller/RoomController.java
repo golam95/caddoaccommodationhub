@@ -36,7 +36,7 @@ public class RoomController {
         return roomService.deleteRoom(id);
     }
 
-    @GetMapping(APIRoute.ROOM_UPDATE)
+    @GetMapping(APIRoute.ROOM_LIST)
     public ResponseEntity<APIResponse<List<RoomDTO>>> roomList() {
         return roomService.roomList();
     }
