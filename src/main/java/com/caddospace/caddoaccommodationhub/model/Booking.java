@@ -5,13 +5,16 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
 @Table(name = "BOOKING")
 @EqualsAndHashCode(callSuper = false, onlyExplicitlyIncluded = true)
-public class Booking {
+public class Booking extends Auditable implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,4 +48,8 @@ public class Booking {
     @Enumerated(EnumType.STRING)
     @Column(name = "STATUS", nullable = false)
     private BookingStatus bookingStatus = BookingStatus.PENDING;
+
+    //    PAYMENT
+    @OneToMany(mappedBy = "booking")
+    private List<Payment> payments = new ArrayList<>();
 }

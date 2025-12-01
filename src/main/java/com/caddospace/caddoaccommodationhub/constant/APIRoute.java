@@ -37,4 +37,9 @@ public class APIRoute {
     public static final String BOOKING_DELETE = "/delete/{id}";
     public static final String BOOKING_LIST= "/list";
 
+    public static final String PAYMENT_SAVE = "/save";
+    public static final String PAYMENT_UPDATE= "/update/{id}";
+    public static final String PAYMENT_DELETE = "/delete/{id}";
+    public static final String PAYMENT_LIST= "/list";
+
 }
