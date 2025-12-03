@@ -52,4 +52,9 @@ public class APIRoute {
     public static final String HOSTEL_BED_DELETE = "/delete/{id}";
     public static final String HOSTEL_BED_LIST= "/list";
 
+    public static final String VACATION_RENTAL_SAVE = "/save";
+    public static final String VACATION_RENTAL_UPDATE= "/update/{id}";
+    public static final String VACATION_RENTAL_DELETE = "/delete/{id}";
+    public static final String VACATION_RENTAL_LIST= "/list";
+
 }

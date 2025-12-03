@@ -52,7 +52,11 @@ public class Property extends Auditable implements Serializable {
     @OneToMany(mappedBy = "property")
     private List<Room> rooms = new ArrayList<>();
 
-//    Booking
+    //    Booking
     @OneToMany(mappedBy = "property")
     private List<Booking> bookings = new ArrayList<>();
+
+    //    vacation details
+    @OneToOne(mappedBy = "property", cascade = CascadeType.ALL, orphanRemoval = true)
+    private VacationRentalDetails vacationRentalDetails;
 }
