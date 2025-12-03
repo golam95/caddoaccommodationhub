@@ -42,4 +42,14 @@ public class APIRoute {
     public static final String PAYMENT_DELETE = "/delete/{id}";
     public static final String PAYMENT_LIST= "/list";
 
+    public static final String REVIEW_SAVE = "/save";
+    public static final String REVIEW_UPDATE= "/update/{id}";
+    public static final String REVIEW_DELETE = "/delete/{id}";
+    public static final String REVIEW_LIST= "/list";
+
+    public static final String HOSTEL_BED_SAVE = "/save";
+    public static final String HOSTEL_BED_UPDATE= "/update/{id}";
+    public static final String HOSTEL_BED_DELETE = "/delete/{id}";
+    public static final String HOSTEL_BED_LIST= "/list";
+
 }

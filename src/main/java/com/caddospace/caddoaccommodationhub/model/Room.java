@@ -46,4 +46,8 @@ public class Room extends Auditable implements Serializable {
     //    Booking
     @OneToMany(mappedBy = "room")
     private List<Booking> bookings = new ArrayList<>();
+
+    //    hostel beds
+    @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<HostelBed> beds = new ArrayList<>();
 }
